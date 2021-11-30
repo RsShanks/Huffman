@@ -1,0 +1,28 @@
+int tableautrié(int tab[],int taille)
+{
+    int maxreccurence;
+    int tableauorganisé;
+    tableauorganisé[256];
+    for(i=0;i<255;i++){
+    tableauorganisé[i]=minTableau;
+    tab[i]=tab[i]+maxTableau+1;
+    }
+}
+struct Elementtableauorganisé()
+{
+    int ordre;
+    int nboccurence;
+    int doitegauche;// 0 ou 1 dans la liste chainé
+    struct arb *fg;
+    struct arb *fd;
+    char caractère; //quel caractère c'est
+}
+int tableauorganiséavecstructure(tab[i])
+// on creer un tableau à partir du tableautrié sauf que chaque therme est une struct Elementableauorganisé (ce sera plus facile à ranger)
+{ 
+    for(i=0;i<256;i++){
+        int tableauorganiséavecstructure[256];
+        tableautrié[i]=tableauoraganisé
+    }
+
+}
