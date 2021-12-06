@@ -1,12 +1,34 @@
-void TriSelec(int tab[], int size, int count) {
-    int tmp;
-    count++;
-    for (int i=0; i<size-1; i++) {
-        if (tab[i] > tab[i+1]) {
-            tmp=tab[i+1];
-            tab[i+1]=tab[i];
-            tab[i]=tmp;
-            TriSelec(tab,size,count);
+char *concatener01(const char *a, const char *b)                                                  //fonction qui concatene les chaines de caracteres (ici c des nombre)
+{
+    const size_t a=strlen(a);                                                                     //on utilise principalement strcpy qui va nous permettre d'imprimer dans une chaine les deux chaines a concatener
+    const size_t b=strlen(b);                                                                     // note a moi meme : NE PAS OUBLIER LE FREE DANS LE MAIN !!!!!
+    char *concatener=malloc(strlen(a)+strlen(b)+1);                                               //+1 pour l'element null au cas ou psk strlen peut renvoyer null si a ou b vide donc strcpy va pas marcher
+    strcpy(concatener, a);                                                                        //malloc pour attribuer l'espace memoire pour strcpy dans la nouvelle chaine qui contient le tout
+    strcpy(concatener, b);                                                                        //strcpy tout bete de la chaine a et b dans la chaine concatener
+    return concatener;
+}
+
+PCheminBinaire Compression(PArbre arbreHuffman, PCheminBinaire chemin, char lettre)
+{
+    unsigned int i, j;
+    chemin->lettre=lettre;
+    
+    while(lettre==arbreHuffman->lettre)
+    {
+        for (i = 0; arbreHuffman->fg->lettre[i] != '\0'; i++) 
+        {
+            for(j = 0; arbreHuffman->fd->lettre[i] != '\0'; i++)
+            {
+                if (arbreHuffman->fg->lettre[i] == lettre) 
+                {
+                    chemin->nomBinaire=concatener01(chemin->nomBinaire,0);                                                                        
+                }
+                if(arbreHuffman->fd->lettre[i]==lettre)
+                {
+                    chemin->nomBinaire=concatener01(chemin->nomBinaire,1);
+                }
+            }
         }
     }
+    return chemin;
 }
