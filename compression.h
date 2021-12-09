@@ -7,6 +7,6 @@
 #include "arbre.h"
 #include "liste_chainée.h"
 
-void Compresssion();
+void Compression(char *nomFichier, char *fichierBinaire);
 
 #endif /* COMPRESSION_H */

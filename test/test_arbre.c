@@ -8,7 +8,7 @@ int test_creerArbre()
 
   printf("Cas d'utilisation normal\n");
   PArbre tree = creerArbre('A', 1);
-  result += expectStr("tree->lettre", tree->lettre, "A");
+  result += expectChar("tree->lettre", tree->lettre, 'A');
   result += expectInt("tree->occurence", tree->occurrence, 1);
   result += expectPtr("tree->fg", tree->fg, NULL);
   result += expectPtr("tree->fd", tree->fd, NULL);
@@ -44,8 +44,8 @@ int test_rechercheCheminBinaire()
   int result = 0;
 
   printf("Cas où l'arbre est vide\n");
-  PArbre emptyTree = creerArbre("", 0);
-  char *chemin0 = rechercheCheminBinaire(emptyTree, "a", "");
+  PArbre emptyTree = creerArbre(NULL, 0);
+  char *chemin0 = rechercheCheminBinaire(emptyTree, 'A', "");
 
   free(emptyTree);
   return 0;

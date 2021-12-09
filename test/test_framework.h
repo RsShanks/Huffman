@@ -1,6 +1,7 @@
 #ifndef TEST_FRAMEWORK_H
 #define TEST_FRAMEWORK_H
 
+/* Je m'étais trop chauffé la dessus, pas l time de le faire marcher 
 typedef struct TestResult_
 {
   char *name;
@@ -8,7 +9,8 @@ typedef struct TestResult_
   char *errorMessage;
 } TestResult;
 
-TestResult runTest(char *testName, int *(*testFunction)());
+TestResult runTest(char *testName, char *(*testFunction)());
+*/
 
 int expectInt(const char *variableName, long long actual, long long expected);
 int expectFloat(const char *variableName, float actual, float expected);
